@@ -63,10 +63,13 @@ Requires:	php5(thread-safety) = 0
 Conflicts:	ZendStudioServer <= 5.2.0
 
 %description -n php-%{name}
-ZendStudioServer for PHP 5.x.
+The Zend Debug Server enables remote debugging of PHP applications. It
+plugs into a PHP server and allows the Zend Development Environment to
+control the execution of PHP applications on the server.
 
-%description -n php-%{name} -l pl.UTF-8
-ZendStudioServer dla PHP 5.x.
+The Debug Server is designed be deployed safely on production servers.
+It does not affect server performance and features access-list based
+security for protecting the server from unauthorized access.
 
 %prep
 %setup -qcT
