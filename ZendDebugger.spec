@@ -3,7 +3,8 @@
 # - Can't find what Free Download means (http://www.zend.com/free_download/list)
 %define		php4_version	4.4
 %define		php5_version	5.2
-Summary:	The Zend Debug Server enables remote debugging of PHP applications
+Summary:	The Zend Debug Server enabling remote debugging of PHP applications
+Summary(pl.UTF-8):	Zend Debug Server pozwalający na zdalne śledzenie aplikacji PHP
 Name:		ZendDebugger
 Version:	5.2.10
 Release:	0.4
@@ -37,8 +38,18 @@ The Debug Server is designed be deployed safely on production servers.
 It does not affect server performance and features access-list based
 security for protecting the server from unauthorized access.
 
+%description -l pl.UTF-8
+Zend Debug Server pozwala na zdalne śledzenie aplikacji PHP. Podłącza
+się do serwera PHP i pozwala środowisku Zend Development Environment
+sterować wykonywaniem aplikacji PHP na serwerze.
+
+Debug server jest zaprojektowany z myślą o bezpiecznym wdrożeniu na
+serwerach produkcyjnych. Nie wpływa na wydajność serwera i cechuje się
+bezpieczeństwem opartym na listach dostępu.
+
 %package -n php4-%{name}
 Summary:	Zend Debugger for PHP 4.x
+Summary(pl.UTF-8):	Zend Debugger dla PHP 4.x
 Group:		Development/Languages/PHP
 Requires:	php4(thread-safety) = 0
 Requires:	php4-common < 3:%(awk 'BEGIN{print %{php4_version} + 0.1}')
@@ -54,8 +65,18 @@ The Debug Server is designed be deployed safely on production servers.
 It does not affect server performance and features access-list based
 security for protecting the server from unauthorized access.
 
+%description -n php4-%{name} -l pl.UTF-8
+Zend Debug Server pozwala na zdalne śledzenie aplikacji PHP. Podłącza
+się do serwera PHP i pozwala środowisku Zend Development Environment
+sterować wykonywaniem aplikacji PHP na serwerze.
+
+Debug server jest zaprojektowany z myślą o bezpiecznym wdrożeniu na
+serwerach produkcyjnych. Nie wpływa na wydajność serwera i cechuje się
+bezpieczeństwem opartym na listach dostępu.
+
 %package -n php-%{name}
 Summary:	Zend Debugger for PHP 5.x
+Summary(pl.UTF-8):	Zend Debugger dla PHP 5.x
 Group:		Development/Languages/PHP
 Requires:	php-common < 4:%(awk 'BEGIN{print %{php5_version} + 0.1}')
 Requires:	php-common >= 4:%{php5_version}
@@ -70,6 +91,15 @@ control the execution of PHP applications on the server.
 The Debug Server is designed be deployed safely on production servers.
 It does not affect server performance and features access-list based
 security for protecting the server from unauthorized access.
+
+%description -n php-%{name} -l pl.UTF-8
+Zend Debug Server pozwala na zdalne śledzenie aplikacji PHP. Podłącza
+się do serwera PHP i pozwala środowisku Zend Development Environment
+sterować wykonywaniem aplikacji PHP na serwerze.
+
+Debug server jest zaprojektowany z myślą o bezpiecznym wdrożeniu na
+serwerach produkcyjnych. Nie wpływa na wydajność serwera i cechuje się
+bezpieczeństwem opartym na listach dostępu.
 
 %prep
 %setup -qcT
