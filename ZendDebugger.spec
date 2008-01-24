@@ -22,8 +22,6 @@ ExclusiveArch:	%{ix86} %{x8664}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_datadir	%{_prefix}/share/Zend
-%define		no_install_post_strip		1
-%define		no_install_post_chrpath		1
 %define		_php4_extensiondir	%{_libdir}/php4
 %define		_php5_extensiondir	%{_libdir}/php
 %define		_php4_sysconfdir	/etc/php4/conf.d
